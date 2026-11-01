@@ -1,0 +1,27 @@
+[PASS] Valid short input
+  Exit code: 0
+  Expected: accept
+  Actual: accepted
+[PASS] Exactly 128 bytes
+  Exit code: 0
+  Expected: accept
+  Actual: accepted
+[PASS] 129 bytes (one over limit)
+  Exit code: 1
+  Expected: reject
+  Actual: rejected
+  stderr: [ERROR] Input exceeds maximum of 128 bytes
+[PASS] Missing file
+  Exit code: 1
+  Expected: reject
+  Actual: rejected
+  stderr: fopen: No such file or directory
+
+Original exploit payload: 160 bytes
+[PASS] Original exploit payload
+  Exit code: 1
+  Expected: reject
+  Actual: rejected
+  stderr: [ERROR] Input exceeds maximum of 128 bytes
+
+Results: 5/5 tests passed

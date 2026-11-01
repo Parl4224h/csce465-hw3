@@ -1,0 +1,7 @@
+=== Vulnerable Parser ===
+RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH	Symbols		FORTIFY	Fortified	Fortifiable	FILE
+[33mPartial RELRO[m   [31mNo canary found[m   [32mNX enabled [m   [31mNo PIE       [m   [32mNo RPATH [m  [32mNo RUNPATH [m  [31m57 Symbols	[m  [31mNo[m	0		5		./legacy_log_parser
+
+=== Fixed Parser ===
+RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH	Symbols		FORTIFY	Fortified	Fortifiable	FILE
+[32mFull RELRO   [m   [32mCanary found   [m   [32mNX enabled [m   [32mPIE enabled  [m   [32mNo RPATH [m  [32mNo RUNPATH [m  [31m59 Symbols	[m  [32mYes[m	2		5		./legacy_log_parser_fixed
