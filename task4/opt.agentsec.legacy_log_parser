@@ -1,0 +1,29 @@
+#include <tunables/global>
+
+profile /opt/agentsec/legacy_log_parser
+/opt/agentsec/legacy_log_parser {
+
+    # Standard runtime library and loader access
+    #include <abstractions/base>
+
+    # Allow reading/mapping the parser executable
+    /opt/agentsec/legacy_log_parser mr,
+
+    # Allow reading only the selected payload
+    /opt/agentsec/payloads/exploit.bin r,
+
+    # Allow writing output inside the marker directory
+    /opt/agentsec/markers/ rw,
+    /opt/agentsec/markers/** rwk,
+
+    # Explicitly block and audit access to the decoy
+    audit deny /opt/agentsec/decoy.txt rwkl,
+
+    # Block executing shells and unrelated programs
+    audit deny /{bin,sbin,usr/bin,usr/sbin}/** x,
+
+    # Block execution from temporary directories
+    audit deny /tmp/** x,
+    audit deny /var/tmp/** x,
+    audit deny /opt/agentsec/** x,
+}
