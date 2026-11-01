@@ -1,0 +1,26 @@
+Breakpoint 1 at 0x40164a: file legacy_log_parser.c, line 59.
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Enable debuginfod for this session? (y or [n]) [answered N; input not from terminal]
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, vulnerable_copy (input=0x405480 "INFO: Server started successfully\n", n=34) at legacy_log_parser.c:59
+59	    memcpy(buf, input, n);
+Stack level 0, frame at 0x7fffffffe060:
+ rip = 0x40164a in vulnerable_copy (legacy_log_parser.c:59); saved rip = 0x4017e8
+ called by frame at 0x7fffffffe0a0
+ source language c.
+ Arglist at 0x7fffffffe050, args: input=0x405480 "INFO: Server started successfully\n", n=34
+ Locals at 0x7fffffffe050, Previous frame's sp is 0x7fffffffe060
+ Saved registers:
+  rbp at 0x7fffffffe050, rip at 0x7fffffffe058
+rbp            0x7fffffffe050      0x7fffffffe050
+rsp            0x7fffffffdfb0      0x7fffffffdfb0
+$1 = 0x7fffffffdfc0
+$2 = 0x7fffffffe058
+$3 = 152
+0x7fffffffe058:	0x00000000004017e8
