@@ -1,0 +1,8 @@
+[INFO] Read 160 bytes
+[LOG] Beginning of log (64 bytes):
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[WIN] Successfully redirected execution to win()!
+[WIN] Created markers/ret2win.txt
+[WIN] Decoy read failed: Permission denied
+
+PARSER_EXIT_CODE=0

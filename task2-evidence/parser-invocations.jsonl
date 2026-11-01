@@ -1,0 +1,3 @@
+{"requested": "/etc/passwd", "decision": "BLOCKED", "reason": "File must be inside inbox/", "timestamp": "2026-11-01T20:51:12.438740+00:00"}
+{"requested": "/home/ubuntu/csce465-agentsec/hw3/inbox/exploit.bin", "resolved": "/home/ubuntu/csce465-agentsec/hw3/inbox/exploit.bin", "decision": "ALLOWED", "timestamp": "2026-11-01T20:51:19.347205+00:00"}
+{"resolved": "/home/ubuntu/csce465-agentsec/hw3/inbox/exploit.bin", "decision": "EXECUTED", "exit_code": 0, "timestamp": "2026-11-01T20:51:19.348058+00:00"}
